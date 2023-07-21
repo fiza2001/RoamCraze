@@ -1,10 +1,9 @@
-import { createClient } from "contentful"
+// import { createClient } from "contentful"
 import AboutPage from "@/components/AboutPage"
 import Head from "next/head";
 import fetchContent from "@/utils/fetchContent";
 
 export async function getStaticProps(){
-console.log('Hello static props')
 
 const  aboutCollection  = await fetchContent(`
 {
@@ -29,7 +28,7 @@ return {
 export default function About({ abouts }) {
 
 return (
-  <div className="recipe-list">
+  <div>
       <AboutPage abouts={abouts}/>
     </div>
 )

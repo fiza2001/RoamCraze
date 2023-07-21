@@ -1,6 +1,3 @@
-
-import Image from "next/image";
-
 export default function AboutPage({ abouts }) {
   const { whoWeAre, whatWeOffer, ourMission} = abouts.items[0];
 

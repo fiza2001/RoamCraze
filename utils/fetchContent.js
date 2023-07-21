@@ -2,7 +2,7 @@ const space = process.env.CONTENTFUL_SPACE_ID;
 const accessToken = process.env.CONTENTFUL_ACCESS_KEY
 
 
-// https://www.electronjs.org/apps/graphiql
+
 export async function fetchContent(query) {
     
   try {

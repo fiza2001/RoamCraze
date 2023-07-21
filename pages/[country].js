@@ -16,7 +16,6 @@ const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 });
-
 export async function getStaticPaths() {
   const countries = [
     "greece",
@@ -33,7 +32,6 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false,
   };
 }
 
@@ -64,7 +62,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function CountryPage({ country, contentTypes }) {
-  const router = useRouter();
+  // const router = useRouter();
   const [countryDetails, setCountryDetails] = useState(null);
 
   useEffect(() => {
